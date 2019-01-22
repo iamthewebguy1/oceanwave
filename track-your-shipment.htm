@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Track Your Shipment | Oceanwave Delivery Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <style media="screen">
+
+    html, body {
+      width: 100%;
+      background-image: url("img/oceanb.jpg");
+      background-size: cover;
+
+    }
+
+
+    /****************************************************/
+    /*  My Own Style */
+    /****************************************************/
+    /*Acccount Login */
+    .loginbox{
+      padding: 50px 10px;
+      background: rgba(0,0,0,0.5);
+      width: 50%;
+      margin-top: 100px;
+      border-radius: 10px;
+      color: #fff;
+      text-align: center;
+    }
+    #myinput{
+      width: 95%!important;
+    }
+    #loginbtn{
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .order-visuals{
+      text-align: center;
+    }
+
+
+    /*User Account */
+
+    #nav {
+      width: 100%;
+      text-align: right;
+
+    }
+    #myinput{
+      background: rgba(255, 255, 255, 0.5);
+      width: 240px;
+      padding-left: 5px;
+      border-radius: 5px;
+    }
+    .loader{
+      color: blue;
+      margin-top: 10px;
+    }
+    #royal{
+      background: white;
+      padding-top: 50px;
+      width: 100%;
+      height: 1500px;
+      overflow: auto;
+
+    }
+    .firstrow,.secondrow{
+      border: 1px solid grey;
+      padding: 10px 0;
+    }
+    .secondrow{
+      margin-top: 10px;
+    }
+    .order-status {
+      border: 1px solid red;
+    }
+    .order-visuals th{
+      font-size: 100%;
+    }
+
+
+    .time-small{
+      color: grey;
+    }
+    .shipmentdetails {
+      font-size: 80%;
+    }
+    .shipmentdetails h6 {
+      font-size: 90%;
+    }
+    .greenlight{
+      background: green;
+    }
+    .shipmentdetails p{
+      margin: 0;
+    }
+    .mapbtn{
+      cursor: pointer;
+      color: green;
+    }
+    .iframe-ship{
+      display: none;
+    }
+    .danger{
+      margin-top: 10px;
+      font-size: 80%;
+    }
+
+
+
+
+    @media only screen and (max-width: 900px) {
+      /*Acccount Login */
+      .loginbox{
+        padding: 50px 10px;
+        background: rgba(0,0,0,0.5);
+        width: 95%;
+        margin-top: 100px;
+        border-radius: 10px;
+      }
+      #myinput{
+        width: 100%!important;
+      }
+      #loginbtn{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .order-visuals th{
+        font-size: 52%;
+      }
+
+    }
+
+  </style>
+  <body>
+    <!---------------------------------------------------------------------------------------------->
+    <!--
+      Login section
+    -->
+
+    <div class="container loginbox">
+        <i class="fa fa-refresh fa-spin fa-3x fa-fw loader" aria-hidden="true"></i>
+        <br><br>
+        <div class="form-group">
+          <label for="email">Consignment Number:</label>
+          <input  type="text"  id="myinput">
+          <div class="card bg-danger text-white danger">
+              <div class="card-body">Please enter a valid number - NB: You can enter your tracking number here</div>
+            </div>
+        </div>
+      <center>
+        <button type="submit" class="btn btn-primary loginbtn" id="loginbtn">Submit</button>
+        <br>
+
+        <p><small>Can't track your shipment? <a>Contact us</a></small></p>
+        <p><small>Go back to Homepage <a href="index.html">Click here</a></small></p>
+      </center>
+
+
+    </div>
+
+
+
+    <!---------------------------------------------------------------------------------------------->
+    <!--
+      User account track
+    -->
+    <div class="container-fluid" id="royal">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+        <a href="track-your-shipment.htm" id="nav"><i class="fas fa-user-slash"></i> Log-out</a>
+      </nav>
+    <div class="container" >
+
+
+        <center>
+          <table class="table table-sm">
+              <thead>
+                <tr class="order-visuals">
+                  <th>ACCEPTED</th>
+
+                  <th><i class="fas fa-long-arrow-alt-right" style="font-size:18px;color:green"></i></th>
+                  <th>ON-TRANSIT</th>
+
+
+                  <th style="color:white"><i class="fas fa-long-arrow-alt-right" style="font-size:18px;color:white"></i></th>
+                  <th style="color:white">Email</th>
+                  <th style="color:white"><i class="fas fa-long-arrow-alt-right" style="font-size:18px;color:white"></i></th>
+                  <th style="color:white">Email</th>
+                </tr>
+              </thead>
+
+            </table>
+         </center>
+
+      <div class="row firstrow">
+        <div class="col-sm-4">
+          <div class="card bg-light text-dark">
+              <div class="card-body">
+                <h5>Shipment Information</h5>
+                <hr>
+                <p><span class="badge badge-light">Tracking number:</span> <small>BEL4937369890US</small></p>
+                <p><span class="badge badge-light">Shipment date:</span> <small>12:23, January 22 2019</small></p>
+                <p><span class="badge badge-light">Item(s) being shipped:</span> <small>Gold-Diamond</small></p>
+                <p><span class="badge badge-light">Size:</span> <small>1/2 ton</small></p>
+
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+          <br>
+          <br>
+          <div class="row shipmentdetails">
+            <div class="col-4">
+              <h6>January 20, 2019</h6>
+              <p><small class="time-small">8:06am</small></p>
+
+
+            </div>
+            <div class="col-1">
+              <p><i style='font-size:24px' class='fas'>&#xf46d;</i></p>
+
+            </div>
+            <div class="col-6">
+              <h6> Information received for Shipment</h6>
+              <p><small class="time-small">1/2 ton gold and diamond</small> </p>
+              <p><small class="time-small">Oestend, Belgium</small></p>
+              <p class="mapbtn"><i class="fas fa-globe-americas"></i> View on Map</p>
+
+
+            </div>
+
+
+
+          </div>
+          <hr class="greenlight">
+
+          <div class="row shipmentdetails">
+            <div class="col-4">
+              <h6>January 22, 2019</h6>
+              <p><small class="time-small">9:16am</small></p>
+
+
+            </div>
+            <div class="col-1">
+              <p><i style='font-size:24px' class='fas'>&#xf482;</i></p>
+
+            </div>
+            <div class="col-6">
+              <h6> Package placed on transit</h6>
+              <p><small class="time-small">62kg / 2,1995.5 ounces - Standard gold bar</small> </p>
+              <p><small class="time-small">Oestend, Belgium</small></p>
+              <p class="mapbtn"><i class="fas fa-globe-americas"></i> View on Map</p>
+
+
+            </div>
+
+
+
+          </div>
+          <hr class="greenlight">
+
+
+        </div>
+        <div class="container map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285972.57170948!2d3.136858519375529!3d50.98537915158806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcaed2bc6a1929%3A0xaefde7c1487c682a!2sOostende+Haven!5e0!3m2!1sen!2sgh!4v1547908035083" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      <div class="row secondrow">
+        <div class="col-sm-6">
+          <div class="card bg-light text-dark">
+              <div class="card-body">
+                <h5>Sender Information</h5>
+                <hr>
+                <p><span class="badge badge-light">Sender Name:</span> <small>Fletcher Donny Brown</small></p>
+                <p><span class="badge badge-light">Sender Location:</span> <small>Belgium</small></p>
+                <p><span class="badge badge-light">Sender Contact Number:</span> <small>N/A</small></p>
+                <p><span class="badge badge-light">Sender Email:</span> <small>N/A</small></p>
+
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card bg-light text-dark">
+              <div class="card-body">
+                <h5>Receiver Information</h5>
+                <hr>
+                <p><span class="badge badge-light">Receiver Name:</span> <small>Thomas Golden</small></p>
+                <p><span class="badge badge-light">Receiver Location:</span> <small>31 Mayfair Drive, Bluffton SC 29910</small></p>
+                <p><span class="badge badge-light">Receiver Contact Number:</span> <small>N/A</small></p>
+
+              </div>
+            </div>
+        </div>
+
+        <div class="container map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31764.39469114353!2d-0.0008429320480864417!3d5.633332938638418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102078b84e1be8eb%3A0x51be0a7fbca0d94a!2sTema+Harbour!5e0!3m2!1sen!2sgh!4v1547865373862" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+     $(".loader").hide();
+     $(".danger").hide();
+     $(".map").hide();
+     $("#royal").hide();
+     $(".nav").hide();
+
+
+      $("#loginbtn").click(function(){
+
+        if ($("#myinput").val() == "BEL4937369890US") {
+          //User matched
+          $(".loader").show();
+          setTimeout(function(){
+            $(".loginbox").fadeOut('fast');
+            $(".loader").hide();
+            $(".nav").show();
+            $("#royal").fadeIn('slow');
+
+          }, 5000);
+        }else{
+          $(".danger").show();
+        }
+      });
+
+      $(".mapbtn").click(function(){
+
+          $(".map").toggle();
+
+        });
+
+    </script>
+  </body>
+</html>
