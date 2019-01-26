@@ -103,6 +103,9 @@
     .greenlight{
       background: green;
     }
+    .redlight{
+      background: red;
+    }
     .shipmentdetails p{
       margin: 0;
     }
@@ -272,10 +275,35 @@
           </div>
           <hr class="greenlight">
 
+          <div class="row shipmentdetails">
+            <div class="col-4">
+              <h6>January 26, 2019</h6>
+              <p><small class="time-small">8:05am</small></p>
+
+
+            </div>
+            <div class="col-1">
+              <p><i style='font-size:24px' class='fas'>&#xf482;</i></p>
+
+            </div>
+            <div class="col-6">
+              <h6 style="color: red;"><i class='fas fa-exclamation-triangle' style='color:red'></i> Consignment Held</h6>
+              <p><small class="time-small">1/2 ton gold and diamond</small> </p>
+              <p><small class="time-small">Landing Stage Terminal, Princes Parade, Liverpool L3 1DL, UK</small></p>
+              <p class="mapbtn"><i class="fas fa-globe-americas"></i> View on Map</p>
+
+
+            </div>
+
+
+
+          </div>
+          <hr class="redlight">
+
 
         </div>
         <div class="container map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285972.57170948!2d3.136858519375529!3d50.98537915158806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcaed2bc6a1929%3A0xaefde7c1487c682a!2sOostende+Haven!5e0!3m2!1sen!2sgh!4v1547908035083" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76120.0521188315!2d-3.0078940178936144!3d53.401382709446565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28311f3162e8a1a1!2sThe+Isle+Of+Man+Steam+Packet+Co+Ltd!5e0!3m2!1sen!2sgh!4v1548514552108" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -482,6 +510,7 @@
      $("#royal").hide();
      $("#royal-mada").hide();
      $(".nav").hide();
+     $('#myinput').val('');
 
 
       $("#loginbtn").click(function(){
