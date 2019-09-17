@@ -1,0 +1,34 @@
+
+*{
+  margin: 0;
+}
+.policy-box{
+
+  overflow: hidden;
+}
+.policy-box .box{
+  padding: 10px 5%;
+  color: #fff;
+}
+
+.box h3{
+  font-family: verdana;
+  font-size: 130%;
+  margin-bottom: 10px;
+}
+.box span{
+  font-weight: bold;
+  display: block;
+  text-transform: capitalize;
+}
+.box p{
+  padding: 5%;
+  font-family: arial;
+  background: rgb(41, 0, 82);
+  font-family: verdana;
+  font-size: 155%;
+}
+.box span{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
