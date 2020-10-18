@@ -154,10 +154,19 @@
 
   </style>
   <body>
-    <!---------------------------------------------------------------------------------------------->
-    <!--
-      Login section
-    -->
+
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="/__/firebase/7.22.0/firebase-app.js"></script>
+
+      <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+      <script src="/__/firebase/7.22.0/firebase-analytics.js"></script>
+
+      <!-- Add Firebase products that you want to use -->
+      <script src="/__/firebase/7.22.0/firebase-auth.js"></script>
+      <script src="/__/firebase/7.22.0/firebase-firestore.js"></script>
+
 
     <div class="container loginbox">
         <i class="fa fa-refresh fa-spin fa-3x fa-fw loader" aria-hidden="true"></i>
@@ -181,7 +190,7 @@
     </div>
 
     <!---------------------------------------------------------------------------------------------------------->
-    <!-- MOVE 07 NESHIA -->
+    <!-- CASTY 02-JUL-20 -->
     <div class="container-fluid" id="evans">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
         <a href="track-your-shipment.htm" id="nav"><i class="fas fa-user-slash"></i> Log-out</a>
@@ -200,8 +209,6 @@
 
                   <th>ON-TRANSIT</th>
                 -->
-
-
                   <th style="color:white"><i class="fas fa-long-arrow-alt-right" style="font-size:18px;color:white"></i></th>
                   <th style="color:white">Email</th>
                   <th style="color:white"><i class="fas fa-long-arrow-alt-right" style="font-size:18px;color:white"></i></th>
@@ -218,14 +225,10 @@
               <div class="card-body">
                 <h5>Shipment Information</h5>
                 <hr>
-                <p><span >Tracking number:</span> <small>USA104937369666GH</small></p>
-                <p><span >Shipment date:</span> <small>10:05, 01-AUG-2020 </small></p>
-                <p><span >Item(s) being shipped(20):</span> <small> Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray (Latest Model)</small></p>
-                <p><span >Item(s) being shipped(15):</span> <small> Apple iPhone 11 Pro (64GB, Space Gray)</small></p>
-                <p><span >Quantity:</span> <small> 50kg</small></p>
-                <p><span >Purity:</span> <small> 96.3%</small></p>
-                <p><span >C.I.F Price:</span> <small> US$5,000.00</small></p>
-                <p><span >Size:</span> <small>2tBox</small></p>
+                <p><span >Tracking number:</span> <small>NE104937369522US</small></p>
+                <p><span >Shipment date:</span> <small>Not Set </small></p>
+                <p><span >Item(s) to be shipped:</span> <small> Emerald Diamond 108.88 Carats</small></p>
+                <p><span >Size:</span> <small>45.5kg</small></p>
 
               </div>
             </div>
@@ -235,8 +238,27 @@
           <br>
           <div class="row shipmentdetails">
             <div class="col-4">
-              <h6>August 07, 2020</h6>
-              <p><small class="time-small">8:15am</small></p>
+              <h6>June 30, 2020</h6>
+              <p><small class="time-small">8:15</small></p>
+
+
+            </div>
+            <div class="col-1">
+              <p><i style='font-size:24px' class='fas'>&#xf46d;</i></p>
+
+            </div>
+            <div class="col-6">
+              <h6> Consignment At Storage</h6>
+              <p><small class="time-small">Emerald Diamond 108.88 Carats</small> </p>
+              <p><small class="time-small">Vught, NB, 5263 EE Netherlands </small></p>
+            </div>
+          </div>
+          <hr class="greenlight">
+
+          <div class="row shipmentdetails">
+            <div class="col-4">
+              <h6>June 30, 2020</h6>
+              <p><small class="time-small">13:15</small></p>
 
 
             </div>
@@ -246,63 +268,14 @@
             </div>
             <div class="col-6">
               <h6> Information received for Shipment</h6>
-              <p><small class="time-small">Apple MacBook Air/Apple iPhone 11 Pro</small> </p>
-              <p><small class="time-small">500 E Pratt St, Baltimore </small></p>
+              <p><small class="time-small">Emerald Diamond 108.88 Carats</small> </p>
+              <p><small class="time-small">Vught, NB, 5263 EE Netherlands </small></p>
             </div>
+
+
+
           </div>
           <hr class="greenlight">
-
-          <hr class="greenlight">
-          <div class="row shipmentdetails">
-            <div class="col-4">
-              <h6>August 08, 2020</h6>
-              <p><small class="time-small">05:30pm</small></p>
-            </div>
-            <div class="col-1">
-              <p><i style='font-size:24px' class='fas'>&#xf46d;</i></p>
-
-            </div>
-            <div class="col-6">
-              <h6> Consignment En Route To Port of Rotterdam</h6>
-              <p><small class="time-small">Apple MacBook Air/Apple iPhone 11 Pro</small> </p>
-              <p><small class="time-small">Wilhelminakade 909, 3072 AP Rotterdam, Netherlands</small></p>
-            </div>
-          </div>
-          <hr class="greenlight">
-          <div class="row shipmentdetails">
-            <div class="col-4">
-              <h6>August 09, 2020</h6>
-              <p><small class="time-small">09:00</small></p>
-            </div>
-            <div class="col-1">
-              <p><i style='font-size:24px' class='fas'>&#xf46d;</i></p>
-
-            </div>
-            <div class="col-6">
-              <h6> Clearance by Postal for customs inspection (N)</h6>
-              <p><small class="time-small">Apple MacBook Air/Apple iPhone 11 Pro</small> </p>
-              <p><small class="time-small">Mossel Bay Harbour,  South Africa </small></p>
-            </div>
-          </div>
-          <hr class="greenlight">
-          <div class="row shipmentdetails">
-            <div class="col-4">
-              <h6 style="color: red;">August 10, 2020</h6>
-              <p><small class="time-small">9:30</small></p>
-            </div>
-            <div class="col-1">
-              <p><i style='font-size:24px; color:red;' class='fa fa-warning'></i></p>
-
-            </div>
-            <div class="col-6">
-              <h6 style="color: red;"> Consignment Held By Customs (F)</h6>
-              <p><small class="time-small">Apple MacBook Air/Apple iPhone 11 Pro</small> </p>
-              <p><small class="time-small">Mossel Bay Harbour,  South Africa </small></p>
-              <p><small class="time-small mapbtn">View on map</small></p>
-            </div>
-          </div>
-          <hr class="redlight">
-
 
 
         </div>
@@ -310,7 +283,7 @@
       </div>
 
       <div class="container map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6601.5370656983705!2d22.14199737598545!3d-34.17783517228761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dd66a1c284fc951%3A0x4d9f9f1e33e6e533!2sMossel%20Bay%20Harbour!5e0!3m2!1sen!2sgh!4v1597021323805!5m2!1sen!2sgh" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58094568.59577543!2d-150.13414634029493!3d27.28779403871723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd37ae652ef523%3A0xd88f6472b07283a5!2sPort%20of%20Los%20Angeles!5e0!3m2!1sen!2sgh!4v1569407926668!5m2!1sen!2sgh" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
 
       <div class="row secondrow">
@@ -319,10 +292,10 @@
               <div class="card-body">
                 <h5>Sender Information</h5>
                 <hr>
-                <p><span >Sender Name:</span> <small>Juliet Ayisi</small></p>
-                <p><span >Sender Location:</span> <small>2613 North Point Blvd, Baltimore, MD 21222</small></p>
-                <p><span >Sender Contact Number:</span> <small>  928 533 9371 </small></p>
-                <p><span >Sender Email:</span> <small> kennywil022@gmail.com</small></p>
+                <p><span >Sender Name:</span> <small>Richard Cardozo </small></p>
+                <p><span >Sender Location:</span> <small>Helvoirtseweg 195 Vught,NB, 5263 EE Netherland. </small></p>
+                <p><span >Sender Contact Number:</span> <small>+3120 210 1022 </small></p>
+                <p><span >Sender Email:</span> <small>oldchild60@gmail.com </small></p>
               </div>
             </div>
         </div>
@@ -332,10 +305,11 @@
               <div class="card-body">
                 <h5>Receiver Information</h5>
                 <hr>
-                <p><span >Receiver Name:</span> <small>Sarah Hudson</small></p>
-                <p><span >Receiver Location:</span> <small>Diepkloof, Soweto, Gauteng, South Africa</small></p>
-                <p><span >Receiver Contact Number:</span> <small>+1 (416) 724-0047</small></p>
-                <p><span >Receiver Email:</span> <small>lvmmearth@gmail.com</small></p>  <!-- WARNING: 1 -->
+                <p><span >Receiver Name:</span> <small>Richard Cardozo</small></p>
+                <p><span >Cc:</span> <small>Barry Lee Piechoki</small></p>
+                <p><span >Receiver Location:</span> <small>921 W. Taylor Street. Appleton, Wisconsin 54914-2610 USA </small></p>
+                <p><span >Receiver Contact Number:</span> <small>(920) 903-9435   </small></p>
+                <p><span >Receiver Email:</span> <small>97blpie@att.net </small></p>  <!-- WARNING: 1 -->
 
               </div>
             </div>
@@ -344,10 +318,9 @@
 
       </div>
     </div>
+    <!--CASTY 02-JUL-20------------------------------------------------------------------------------------------------>
 
-    <!--MOVE 07------------------------------------------------------------------------------------------------>
-
-    <!-- WARNING: NEW 2020 -->
+    <!-- WARNING: zamani friend -->
     <div class="container-fluid" id="zamani">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
         <a href="track-your-shipment.htm" id="nav"><i class="fas fa-user-slash"></i> Log-out</a>
@@ -384,7 +357,7 @@
               <div class="card-body">
                 <h5>Shipment Information</h5>
                 <hr>
-                <p><span >Tracking number:</span> <small>UK88837369520US</small></p>
+                <p><span >Tracking number:</span> <small>GER88837369520US</small></p>
                 <p><span >Shipment date:</span> <small>10:05, March 12, 2020 </small></p>
                 <p><span >Item(s) being shipped:</span>  <small>1.4 Carats Diamond</small></p>
                 <p><span >Size:</span> <small>4ocw</small></p>
@@ -408,7 +381,7 @@
             <div class="col-6">
               <h6> Information received for Shipment</h6>
               <p><small class="time-small">1.4 Carats Diamond</small> </p>
-              <p><small class="time-small"> Ilfracombe EX34 9EQ, United Kingdom </small></p>
+              <p><small class="time-small"> 68169 Mannheim, Germany </small></p>
             </div>
 
 
@@ -428,10 +401,10 @@
               <div class="card-body">
                 <h5>Sender Information</h5>
                 <hr>
-                <p><span >Sender Name:</span> <small>ATTORNEY MCCOY</small></p>
-                <p><span >Sender Location:</span> <small>UNITED KINGDOM</small></p>
+                <p><span >Sender Name:</span> <small>Yolanda Collinet</small></p>
+                <p><span >Sender Location:</span> <small>USA</small></p>
                 <p><span >Sender Contact Number:</span> <small>***677</small></p>
-                <p><span >Sender Email:</span> <small>mccoychambers76@gmx.com</small></p>
+                <p><span >Sender Email:</span> <small>***</small></p>
               </div>
             </div>
         </div>
@@ -441,10 +414,10 @@
               <div class="card-body">
                 <h5>Receiver Information</h5>
                 <hr>
-                <p><span >Receiver Name:</span> <small>ROBERT A. NEWSOM</small></p>
-                <p><span >Receiver Location:</span> <small>1121 S Cherry St Wellington, KS 67152</small></p>
+                <p><span >Receiver Name:</span> <small>Betty Reyes</small></p>
+                <p><span >Receiver Location:</span> <small>43032 30th St W, Lancaster, CA 93536</small></p>
 
-                <p><span >Receiver Email:</span> <small>PANTHERREFRIGERATION@ICLOUD.COM</small></p>  <!-- WARNING: 1 -->
+                <p><span >Receiver Email:</span> <small>***</small></p>  <!-- WARNING: 1 -->
 
               </div>
             </div>
@@ -455,10 +428,11 @@
 
       </div>
     </div>
-    <!-- WARNING:\\ NEW 2020 -->
+    <!-- WARNING:\\ zamani friend -->
 
+    <!---------------------------------------------------------------------------------------------->
     <!--
-      NEW 2020
+      User account track OSA
     -->
     <div class="container-fluid" id="royal">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
@@ -593,14 +567,17 @@
 
       </div>
     </div>
-    <!-- \\\\ NEW 2020-->
+
+    <!--\  USER AC  -->
+
+    <!-- \\\\ END OF OSA -->
 
 
 
 
     <!---------------------------------------------------------------------------------------------->
     <!--
-      NEW 2020
+      User account track ICE
     -->
     <div class="container-fluid" id="royal-mada">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
@@ -809,9 +786,12 @@
 
 
     </div>
-    <!-- \\\\ NEW 2020 -->
 
-    <!-- WARNING: NEW 2020 -->
+    <!--\  USER AC  -->
+
+    <!-- \\\\ END OF ICE -->
+
+    <!-- WARNING: CASTYMAN -->
     <div class="container-fluid lifestyle-account" id="castyman">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
         <a href="track-your-shipment.htm" id="nav"><i class="fas fa-user-slash"></i> Log-out</a>
@@ -925,7 +905,7 @@
 
       </div>
     </div>
-    <!-- WARNING: \\NEW 2020 -->
+    <!-- WARNING: \\CASTYMAN -->
 
 
 
@@ -948,7 +928,7 @@
 
       $("#loginbtn").click(function(){
         //OSA ACC
-        if ($("#myinput").val() == "XXX0000") {  //NEW 2020
+        if ($("#myinput").val() == "GH04937369522US") {  //GREEN
           //User matched
           $(".loader").show();
           setTimeout(function(){
@@ -960,7 +940,7 @@
           }, 5000);
         }
         //RASBEE
-        else if ($("#myinput").val() == "666666") {  //NEW 2020
+        else if ($("#myinput").val() == "DEN4937369890USA") {  //GREEN
 
           $(".loader").show();
           setTimeout(function(){
@@ -972,7 +952,7 @@
           }, 5000);
         }
         // WARNING: CASTYMAN
-        else if ($("#myinput").val() == "XXX6666") {  //NEW 2020
+        else if ($("#myinput").val() == "GER0007369890US") {  //GREEN
 
           $(".loader").show();
           setTimeout(function(){
@@ -983,7 +963,7 @@
 
           }, 5000);
         }
-        else if ($("#myinput").val() == "USA104937369666GH" || $("#myinput").val() == "USA104937369666GH ") { // MOVE
+        else if ($("#myinput").val() == "NE104937369522US" || $("#myinput").val() == "NE104937369522US ") { //CASTY 2020 JULY 02
           $(".loader").show();
           setTimeout(function(){
             $(".loginbox").fadeOut('fast');
@@ -993,7 +973,7 @@
 
           }, 5000);
         }
-        else if ($("#myinput").val() == "XXX00000") { // NEW 2020
+        else if ($("#myinput").val() == "GER88837369520US") { //december to remember 01 rasbee
           $(".loader").show();
           setTimeout(function(){
             $(".loginbox").fadeOut('fast');
